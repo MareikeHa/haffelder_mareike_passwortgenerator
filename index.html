@@ -22,7 +22,6 @@
                 Mit Großbuchstaben (A-Z)
                 <input type="checkbox" data-capital-letters checked /> <!-- Checkbox -->
             </label>
-            </label>
             <label>
                 Mit Zahlen (0-9)
                 <input type="checkbox" data-numbers checked />
@@ -34,11 +33,22 @@
             <label>
                 Länge
                 <span calss="container_input-range">
-                    <input class="input-range" type="range" data-length min="4" max="40" value="9" />   <!-- Slider für Länge des Passworts (value=Startwert) -->
-                    <span class="span-current-length" data-current-length>9</span>                      <!-- Zahl am Slider -->
+                    <input class="input-range" type="range" data-length min="4" max="40" value="9" /> <!-- Slider für Länge des Passworts (value=Startwert) -->
+                    <span class="span-current-length" data-current-length>9</span> <!-- Zahl am Slider -->
                 </span>
             </label>
-
+            <label>
+                <button type="submit">
+                    Neues Passwort
+                    <i class="fa-regular fa-arrow-rotate-right"></i> <!-- Icon -->
+                </button>
+            </label>
+            <label>
+                <button type="submit">
+                    Passwort herunterladen
+                    <i class="fa-light fa-file-arrow-down"></i> <!-- Icon -->
+                </button>
+            </label>
         </form>
     </main>
 </body>
