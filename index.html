@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mareike´s Passwort-Generator</title>
+    <title>Mareikes Passwort-Generator</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="./build/bundle.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Mareike´s Passwort-Generator</h1>
+        <h1>Mareikes Passwort-Generator</h1>
     </header>
     <main>
         <section>
@@ -33,16 +33,17 @@
             <label>
                 Länge
                 <span class="container_input-range">
-                    <input class="input-range" type="range" data-length min="4" max="40" value="9" /> <!-- Slider für Länge des Passworts (value=Startwert) -->
-                    <span class="span-current-length" data-current-length>9</span> <!-- Zahl am Slider -->
+                    <input class="input-range" type="range" data-length min="4" max="40" value="9"
+                        oninput="this.nextElementSibling.value = this.value" />         <!-- Slider für Länge des Passworts (value=Startwert) -->
+                    <output> <span class="span-current-length" data-current-length>9</span></output>       <!-- Zahl am Slider -->
                 </span>
             </label>
             <label>
-                <button type="submit">
+                <button type="submit" newPassword>
                     Neues Passwort
                     <i class="fa-regular fa-arrow-rotate-right"></i> <!-- Icon -->
                 </button>
-                <button type="submit">
+                <button type="submit" downloadPassword>
                     Passwort herunterladen
                     <i class="fa-light fa-file-arrow-down"></i> <!-- Icon -->
                 </button>
