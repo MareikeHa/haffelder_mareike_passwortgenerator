@@ -23,8 +23,7 @@ function neuesPasswortGenerieren(): string {                        //Funktion g
     if (mitSonderzeichen) pool += SYMBOLE;
 
 
-    for (let i = 0; i < laenge; i++) {                              //Schleife (läuft solang wie die Passwortlänge)
-                                                                    //in jedem Durchgang wird eine neue Stelle vom Passwort berechnet
+    for (let i = 0; i < laenge; i++) {                              //Schleife (läuft solang wie die Passwortlänge + in jedem Durchgang wird eine neue Stelle vom Passwort berechnet)
         const random = Math.floor(Math.random() * pool.length);     //neue Random Number (aus 0-9 * Länge von Pool) (math.floor macht eine Ganzzahl draus)
         returnable += pool[random];                                 //beliebige Stelle im Pool wird gewählt
     }
