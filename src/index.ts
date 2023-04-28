@@ -32,4 +32,13 @@ function neuesPasswortGenerieren(): string {                        //Funktion g
     return returnable                                               //gibt die Passwortstellen zurück
 }
 
-console.log(neuesPasswortGenerieren());
+form.addEventListener("submit", (e) => {                            //wenn auf "Neues Passwort" geklickt wird 
+    e.preventDefault();                                             //dass Seite nicht neuläd wenn man auf "Neues Passwort" klickt
+    erstelleUndZeigeNeuesPasswort();                                //ruft Funktion auf
+});
+
+function erstelleUndZeigeNeuesPasswort() {
+    spanPasswortanzeige.innerText = neuesPasswortGenerieren();      //Passwortanzeige wird das neue Passwort zugewiesen --> wird somit angezeigt
+}
+
+erstelleUndZeigeNeuesPasswort();                                    //ruft Funktion auf (so wird bei Öffnen der Seite gleich ein Passwort angezeigt)
