@@ -95,7 +95,14 @@ button {
     font-weight: 600;
 }
 
+#saveclipboard {
+    position: absolute;
+    top: 53px;
+    right: 30px;
+}
+
 button:hover {
+
     cursor: pointer;
     opacity: 0.7;
 }
