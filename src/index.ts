@@ -31,7 +31,7 @@ function neuesPasswortGenerieren(): string {                        //Funktion g
     return returnable                                               //gibt die Passwortstellen zurück
 }
 
-form.addEventListener("submit", (e) => {                            //wenn auf "Neues Passwort" geklickt wird 
+buttonNeuesPasswort.addEventListener("click", (e) => {                            //wenn auf "Neues Passwort" geklickt wird 
     e.preventDefault();                                             //dass Seite nicht neuläd wenn man auf "Neues Passwort" klickt
     erstelleUndZeigeNeuesPasswort();                                //ruft Funktion auf
 });
