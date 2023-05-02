@@ -44,17 +44,32 @@ erstelleUndZeigeNeuesPasswort();                                    //ruft Funkt
 
 
 buttonSpeichern.addEventListener('click', (e) => {                  //wenn auf Button "Speichern" geklickt wird 
-    e.preventDefault();                                            
+    e.preventDefault();
     inZwischenablagespeichern();                                    //ruft Funktion auf
 });
 
-function inZwischenablagespeichern(){                                  
+function inZwischenablagespeichern() {
     navigator.clipboard.writeText(spanPasswortanzeige.innerText)    //Kopiert Passwort in Zwischenablage (alert ist Anzeige)
         .then(() => {
-        alert("Passwort wurde in der Zwischenablage kopiert!")
-    })
+            alert("Passwort wurde in der Zwischenablage kopiert!")
+        })
         .catch(err => {
-        alert("Etwas ist schief gelaufen");
-        alert(err);
-    })
+            alert("Etwas ist schief gelaufen");
+            alert(err);
+        })
+}
+
+
+buttonPasswortDownload.addEventListener('click', (e) => {                           //wenn Klick auf Button "Passwort herunterladen"
+    e.preventDefault();
+    passwortHerunterladen();
+});
+
+function passwortHerunterladen() {
+    const link = document.createElement("a");                                        // Element "Link" wird mit <a> (definiert ein Hyperlink) erstellt
+    const datei = new Blob([spanPasswortanzeige.innerText], { type: 'text/plain' }); // Blob Objekt mit Inhalt, der im Textfile enthalten sein soll
+    link.href = URL.createObjectURL(datei);                                          //die Blob-Objekt URL wird in href-Attribut des <a>-Tags hinzugefügt
+    link.download = "passwort.txt";                                                  //Standarddatei-Name festlegen
+    link.click();                                                                    //click Event für das <a>-Element, um Datei zu speichern
+    URL.revokeObjectURL(link.href);
 }
