@@ -82,7 +82,9 @@ label:last-child {
     align-items: center;
     gap: 1rem;
 }
-
+output {
+    width: 0.8rem;
+}
 button {
     display: flex;
     justify-content: center;
