@@ -10,7 +10,7 @@ const inputLaenge = document.querySelector("[data-length]") as HTMLInputElement;
 const spanLaengenanzeige = document.querySelector("[data-current-length]") as HTMLSpanElement;         //Längenanzeige (Zahl)
 const buttonNeuesPasswort = document.querySelector("[newPassword]") as HTMLButtonElement;              //Button neues Passwort
 const buttonPasswortDownload = document.querySelector("[downloadPassword]") as HTMLButtonElement;      //Button Passwort herunterladen
-const buttonSpeichern = document.querySelector("[saveclipboard]") as HTMLButtonElement;
+const buttonKopieren = document.querySelector("[copyClipboard]") as HTMLButtonElement;
 
 let idCounter = 0;                                  //Variable IDCounter
 const passwoerter: PasswordObject[] = [];           // Array zumm speichern der generierten Passwörter nach ID
@@ -56,12 +56,12 @@ function erstelleUndZeigeNeuesPasswort() {
 erstelleUndZeigeNeuesPasswort();                                    //ruft Funktion auf (so wird bei Öffnen der Seite gleich ein Passwort angezeigt)
 
 
-buttonSpeichern.addEventListener('click', (e) => {                  //wenn auf Button "Speichern" geklickt wird 
+buttonKopieren.addEventListener('click', (e) => {                  //wenn auf Button "Speichern" geklickt wird 
     e.preventDefault();
-    inZwischenablagespeichern();                                    //ruft Funktion auf
+    inZwischenablageKopieren();                                    //ruft Funktion auf
 });
 
-function inZwischenablagespeichern() {
+function inZwischenablageKopieren() {
     navigator.clipboard.writeText(spanPasswortanzeige.innerText)    //Kopiert Passwort in Zwischenablage (alert ist Anzeige)
         .then(() => {
             alert("Passwort wurde in der Zwischenablage kopiert!");
