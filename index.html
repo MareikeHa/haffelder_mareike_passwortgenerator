@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dein Passwort-Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script defer src="./build/bundle.js"></script>
+
 </head>
 
 <body>
@@ -17,7 +19,7 @@
         <section>
             <span class="width-limit" data-password></span>
         </section>
-        <button id="saveclipboard" saveClipboard> Speichern <i class="fa-light fa-clipboard"></i>
+        <button id="saveclipboard" saveClipboard> <i class="material-icons">content_copy</i>
 		</button>
         <form> <!-- Start Bereich des Formulars mit Eingabe des Benutzers -->
             <label>
@@ -40,14 +42,12 @@
                     <output> <span class="span-current-length" data-current-length>9</span></output>       <!-- Zahl am Slider -->
                 </span>
             </label>
-            <label>
-                <button type="submit" newPassword>
+            <label for="newPassword">
+                <button id="newPassword" newPassword>
                     Neues Passwort
-                    <i class="fa-regular fa-arrow-rotate-right"></i> <!-- Icon -->
                 </button>
-                <button type="submit" downloadPassword>
-                    Passwort herunterladen
-                    <i class="fa-light fa-file-arrow-down"></i> <!-- Icon -->
+                <button downloadPassword>
+                    <i class="material-icons">file_download</i> <!-- Icon -->
                 </button>
             </label>
         </form>
