@@ -20,7 +20,7 @@
             <span class="width-limit" data-password></span>
         </section>
         <button id="copyClipboard" copyClipboard> <i class="material-icons">content_copy</i>
-		</button>
+        </button>
         <form> <!-- Start Bereich des Formulars mit Eingabe des Benutzers -->
             <label>
                 Mit Großbuchstaben (A-Z)
@@ -35,21 +35,19 @@
                 <input type="checkbox" id="checkbox3" data-symbols checked />
             </label>
             <label>
-                Länge 
+                Länge
                 <span class="container_input-range">
                     <input class="input-range" type="range" data-length min="4" max="40" value="9"
-                        oninput="this.nextElementSibling.value = this.value" />         <!-- Slider für Länge des Passworts (value=Startwert) -->
-                    <output> <span class="span-current-length" data-current-length>9</span></output>       <!-- Zahl am Slider -->
+                        oninput="this.nextElementSibling.value = this.value" />    <!-- Slider für Länge des Passworts (value=Startwert) -->
+                    <output> <span class="span-current-length" data-current-length>9</span></output>   <!-- Zahl am Slider -->
                 </span>
             </label>
-            <label for="newPassword">
-                <button id="newPassword" newPassword>
-                    Neues Passwort
-                </button>
-                <button downloadPassword>
-                    <i class="material-icons">file_download</i> <!-- Icon -->
-                </button>
-            </label>
+            <button id="newPassword" newPassword>
+                Neues Passwort
+            </button>
+            <button id="downloadPassword" >
+                <i class="material-icons">file_download</i> <!-- Icon -->
+            </button>
         </form>
     </main>
 </body>
