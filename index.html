@@ -17,35 +17,35 @@
     </header>
     <main>
         <section>
-            <span class="width-limit" data-password></span>
+            <span class="width-limit" id="data-password"></span>
         </section>
-        <button id="copyClipboard" copyClipboard> <i class="material-icons">content_copy</i>
+        <button id="copyClipboard"> <i class="material-icons">content_copy</i>
         </button>
         <form> <!-- Start Bereich des Formulars mit Eingabe des Benutzers -->
             <label>
                 Mit Großbuchstaben (A-Z)
-                <input type="checkbox" id="checkbox1" data-capital-letters checked /> <!-- Checkbox -->
+                <input type="checkbox" id="data-capital-letters" checked /> <!-- Checkbox -->
             </label>
             <label>
                 Mit Zahlen (0-9)
-                <input type="checkbox" id="checkbox2" data-numbers checked />
+                <input type="checkbox" id="data-numbers" checked />
             </label>
             <label>
                 Mit Sonderzeichen (!?$%&*@)
-                <input type="checkbox" id="checkbox3" data-symbols checked />
+                <input type="checkbox" id="data-symbols" checked />
             </label>
             <label>
                 Länge
                 <span class="container_input-range">
-                    <input class="input-range" type="range" data-length min="4" max="40" value="9"
+                    <input class="input-range" type="range" id="data-length" min="4" max="40" value="9"
                         oninput="this.nextElementSibling.value = this.value" />    <!-- Slider für Länge des Passworts (value=Startwert) -->
-                    <output> <span class="span-current-length" data-current-length>9</span></output>   <!-- Zahl am Slider -->
+                    <output> <span class="span-current-length" id="data-current-length">9</span></output>   <!-- Zahl am Slider -->
                 </span>
             </label>
-            <button id="newPassword" newPassword>
+            <button id="newPassword">
                 Neues Passwort
             </button>
-            <button id="downloadPassword" >
+            <button id="downloadPassword">
                 <i class="material-icons">file_download</i> <!-- Icon -->
             </button>
         </form>

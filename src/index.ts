@@ -1,16 +1,16 @@
 import { NUMMERN, SYMBOLE, buchstabenGROß, buchstabenKLEIN } from "./constants";
 
 //Variablen anlegen
-const spanPasswortanzeige = document.querySelector("[data-password]") as HTMLSpanElement;              //Anzeige von generiertem Passwort + sagen dass Span Element (mit [] genaue Suche nach benennung)
+const spanPasswortanzeige = document.querySelector("#data-password") as HTMLSpanElement;              //Anzeige von generiertem Passwort + sagen dass Span Element (mit [] genaue Suche nach benennung)
 const form = document.querySelector("form") as HTMLFormElement;                                        //Form
-const inputGroßbuchstaben = document.querySelector("[data-capital-letters]") as HTMLInputElement;      //Großbuchstaben
-const inputZahlen = document.querySelector("[data-numbers]") as HTMLInputElement;                      //Zahlen
-const inputSonderzeichen = document.querySelector("[data-symbols]") as HTMLInputElement;               //Sonderzeichen
-const inputLaenge = document.querySelector("[data-length]") as HTMLInputElement;                       //Länge
-const spanLaengenanzeige = document.querySelector("[data-current-length]") as HTMLSpanElement;         //Längenanzeige (Zahl)
-const buttonNeuesPasswort = document.querySelector("[newPassword]") as HTMLButtonElement;              //Button neues Passwort
-const buttonPasswortDownload = document.querySelector("[downloadPassword]") as HTMLButtonElement;      //Button Passwort herunterladen
-const buttonKopieren = document.querySelector("[copyClipboard]") as HTMLButtonElement;
+const inputGroßbuchstaben = document.querySelector("#data-capital-letters") as HTMLInputElement;      //Großbuchstaben
+const inputZahlen = document.querySelector("#data-numbers") as HTMLInputElement;                      //Zahlen
+const inputSonderzeichen = document.querySelector("#data-symbols") as HTMLInputElement;               //Sonderzeichen
+const inputLaenge = document.querySelector("#data-length") as HTMLInputElement;                       //Länge
+const spanLaengenanzeige = document.querySelector("#data-current-length") as HTMLSpanElement;         //Längenanzeige (Zahl)
+const buttonNeuesPasswort = document.querySelector("#newPassword") as HTMLButtonElement;              //Button neues Passwort
+const buttonPasswortDownload = document.querySelector("#downloadPassword") as HTMLButtonElement;      //Button Passwort herunterladen
+const buttonKopieren = document.querySelector("#copyClipboard") as HTMLButtonElement;                 //Button Passwort kopieren
 
 let idCounter = 0;                                  //Variable IDCounter
 const passwoerter: PasswordObject[] = [];           // Array zumm speichern der generierten Passwörter nach ID
@@ -71,7 +71,6 @@ function inZwischenablageKopieren() {
             alert(err);
         })
 }
-
 
 buttonPasswortDownload.addEventListener('click', (e) => {                           //wenn Klick auf Button "Passwort herunterladen"
     e.preventDefault();
