@@ -3,13 +3,11 @@ import { passwortHerunterladen } from "./download";
 import { inZwischenablageKopieren } from "./copy";
 
 //Variablen anlegen
-export const spanPasswortanzeige = document.querySelector("#data-password") as HTMLSpanElement;       //Anzeige von generiertem Passwort + sagen dass Span Element (mit [] genaue Suche nach benennung)
-const form = document.querySelector("form") as HTMLFormElement;                                       //Form
+export const spanPasswortanzeige = document.querySelector("#data-password") as HTMLSpanElement;       //Passwortanzeige
 const inputGroßbuchstaben = document.querySelector("#data-capital-letters") as HTMLInputElement;      //Großbuchstaben
 const inputZahlen = document.querySelector("#data-numbers") as HTMLInputElement;                      //Zahlen
 const inputSonderzeichen = document.querySelector("#data-symbols") as HTMLInputElement;               //Sonderzeichen
 const inputLaenge = document.querySelector("#data-length") as HTMLInputElement;                       //Länge
-const spanLaengenanzeige = document.querySelector("#data-current-length") as HTMLSpanElement;         //Längenanzeige (Zahl)
 const buttonNeuesPasswort = document.querySelector("#newPassword") as HTMLButtonElement;              //Button neues Passwort
 export const buttonPasswortDownload = document.querySelector("#downloadPassword") as HTMLButtonElement;      //Button Passwort herunterladen
 const buttonKopieren = document.querySelector("#copyClipboard") as HTMLButtonElement;                 //Button Passwort kopieren
