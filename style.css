@@ -5,22 +5,18 @@
     box-sizing: border-box;
     margin: 0;
 }
-
 body {
     background-color: #cdaf95;
     font-family: 'Montserrat', sans-serif;
 }
-
 header {
-    margin-top: 55px;
-    margin-bottom: 50px;
+    padding-top: 55px;
+    padding-bottom: 50px;
 }
-
 header h1 {
     text-align: center;
     font-weight: 800;
 }
-
 main {
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(0, 0, 0);
@@ -37,14 +33,12 @@ main {
     min-width: 370px;
 
 }
-
 section, form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
 section {
     font-size: 16pt;
     margin-top: 15px;
@@ -55,47 +49,35 @@ section {
     min-height: 7rem;
     width: 350px;
 }
-
 #data-password {
     width: clamp(0px, 80%, 800px);
 }
-
 form {
     width: 100%;
 }
-
 label {
     width: clamp(0px, 100%, 800px);
 }
-
 label {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
     padding: 25px;
 }
-
-label:last-child {
-    border-bottom: none;
-}
-
 #data-capital-letters,
 #data-numbers,
 #data-symbols,
 .container_input-range {
     accent-color: #cdaf95;
 }
-
 .container_input-range {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-
 output {
     width: 0.8rem;
 }
-
 button {
     display: flex;
     justify-content: center;
@@ -109,24 +91,19 @@ button {
     font-weight: 600;
     height: 36px;
 }
-
 #copyClipboard {
     top: 53px;
     right: 30px;
 }
-
 #newPassword {
     top: 425px;
     left: 100px;
 }
-
 #downloadPassword {
     top: 425px;
     right: 100px;
 }
-
 button:hover {
     cursor: pointer;
     opacity: 0.7;
 }
-

@@ -1,4 +1,4 @@
-//Konstanten/Pool, die für die Generation des Passworts genutzt werden 
+//Konstanten/Pool, die für die Generierung des Passworts genutzt werden 
 
 export const buchstabenKLEIN: string = "abcdefghijklmnopqrstuvwxyz";
 export const buchstabenGROß: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
