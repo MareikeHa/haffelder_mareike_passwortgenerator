@@ -6,7 +6,7 @@ export function inZwischenablageKopieren() {
             alert("Passwort wurde in der Zwischenablage kopiert!");
         })
         .catch(err => {
-            alert("Etwas ist schief gelaufen");
+            alert("Etwas ist schiefgelaufen");
             alert(err);
         });
 }
